@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+QuickSR Documentation
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+The documentation is available here:
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+https://quick-symbolic-regression-docs.readthedocs.io/en/latest/index.html

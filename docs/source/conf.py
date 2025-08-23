@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'QuickSR'
+copyright = '2025, Doğu Kocatepe'
+author = 'Doğu Kocatepe'
 
 release = '0.1'
 version = '0.1.0'
