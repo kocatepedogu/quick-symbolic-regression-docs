@@ -6,29 +6,29 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+On Fedora, to install dependencies with dnf:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   $ sudo dnf install gcc gcc-c++ make cmake -y
+   $ sudo dnf install rocminfo rocm-opencl rocm-clinfo rocm-hip rocm-hip-devel amd-smi -y
+   $ sudo dnf install python3 python3-devel -y
+   $ sudo dnf install libasan libubsan -y
+   $ sudo dnf install doxygen -y
 
-Creating recipes
-----------------
+To clone the repository with submodules (pybind11):
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+.. code-block:: console
 
-.. autofunction:: lumache.get_random_ingredients
+   $ git clone https://github.com/kocatepedogu/quick-symbolic-regression.git
+   $ cd quick-symbolic-regression
+   $ git submodule update --init --recursive
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+To compile the project with CMake:
 
-.. autoexception:: lumache.InvalidKindError
+.. code-block:: console
 
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+   cmake .
+   $ make -j$(nproc)
+   $ export PYTHONPATH=$(pwd)
 
