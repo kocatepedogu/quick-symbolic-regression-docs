@@ -12,8 +12,7 @@ The CPU runner evaluates and trains given expressions entirely on the CPU. When 
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        runner_generator=CPURunnerGenerator())
+   runner_generator=CPURunnerGenerator()
 
 GPU Runners
 -----------
@@ -27,8 +26,7 @@ In the inter-individual GPU mode, parallelization is done over individuals. A si
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        runner_generator=InterIndividualRunnerGenerator())
+   runner_generator=InterIndividualRunnerGenerator()
 
 Likely due to control flow divergence within a wave/warp, no performance benefits were observed with this mode when compared against the CPU-only implementation. This mode is included for completeness.
 
@@ -39,8 +37,7 @@ The intra-individual GPU mode parallelizes over data points. For each individual
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        runner_generator=IntraIndividualRunnerGenerator())
+   runner_generator=IntraIndividualRunnerGenerator()
 
 .. image:: runners/runners-intra.png
 
@@ -53,8 +50,7 @@ The hybrid GPU mode parallelizes over both individuals and data points. A single
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        runner_generator=HybridRunnerGenerator())
+   runner_generator=HybridRunnerGenerator()
 
 .. image:: runners/runners-hybrid.png
 

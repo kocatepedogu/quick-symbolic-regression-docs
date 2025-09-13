@@ -14,8 +14,7 @@ structure and size. Usage:
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        initialization=GrowInitialization())
+   initialization=GrowInitialization()
 
 The smallest depth is one, meaning that some individuals can consist of just a terminal.
 
@@ -25,8 +24,7 @@ initialization. Therefore, the initial maximum depth can be overriden using the 
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        initialization=GrowInitialization(init_depth=4))
+   initialization=GrowInitialization(init_depth=4)
 
 Here is an example population generated with grow initialization (depth 4):
 
@@ -41,16 +39,14 @@ fully grown. All of the generated expressions have the exact same depth. Usage:
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        initialization=FullInitialization())
+   initialization=FullInitialization()
 
 Similar to the previous case, the depth is normally inherited from the global configuration,
 but this can be overriden by explicitly specifying an `init_depth` value:
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        initialization=FullInitialization(init_depth=3))
+   initialization=FullInitialization(init_depth=3)
 
 Here is an example population generated with full initialization (depth 3):
 
@@ -64,7 +60,6 @@ while the other half consist of individuals produced by Full Initialization. Usa
 
 .. code-block:: python3
 
-   model = SymbolicRegressionModel(...,
-        initialization=RampedHalfAndHalfInitialization())
+   initialization=RampedHalfAndHalfInitialization()
 
 `init_depth` can be used override maximum depth as before:
