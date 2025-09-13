@@ -10,3 +10,4 @@ User's Guide
    initialization
    mutation
    recombination
+   parentselection
