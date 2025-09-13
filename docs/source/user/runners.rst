@@ -42,7 +42,7 @@ The intra-individual GPU mode parallelizes over data points. For each individual
    model = SymbolicRegressionModel(...,
         runner_generator=IntraIndividualRunnerGenerator())
 
-.. image:: runners-intra.png
+.. image:: runners/runners-intra.png
 
 This mode provides speedup over CPU as the dataset size gets larger.
 
@@ -56,7 +56,7 @@ The hybrid GPU mode parallelizes over both individuals and data points. A single
    model = SymbolicRegressionModel(...,
         runner_generator=HybridRunnerGenerator())
 
-.. image:: runners-hybrid.png
+.. image:: runners/runners-hybrid.png
 
 This mode provides speedup over CPU as the population size gets larger.
 
