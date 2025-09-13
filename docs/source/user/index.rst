@@ -6,3 +6,4 @@ User's Guide
 .. toctree::
 
    importing
+   runners
