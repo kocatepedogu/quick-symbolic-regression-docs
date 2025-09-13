@@ -9,3 +9,4 @@ User's Guide
    runners
    initialization
    mutation
+   recombination
